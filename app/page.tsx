@@ -1,6 +1,5 @@
 "use client";
-import styles from "./page.module.css";
-import { Input } from "@/src/components/ui/input";
+
 import { Select } from "@/src/components/ui/select";
 import { DatePicker } from "@/src/components/ui/datePicker";
 import { useEffect, useState } from "react";
@@ -77,7 +76,7 @@ export default function Home() {
     } else {
       setWorkingDays(0);
     }
-  }, [startDate, endDate]);
+  }, [startDate, endDate, isHoliday]);
 
   const handleStartDateChange = (date: string) => {
     setStartDate(date);
